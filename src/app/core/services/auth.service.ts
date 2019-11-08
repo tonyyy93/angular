@@ -48,7 +48,7 @@ export class AuthService {
    */
   public isLoggedIn() {
     const lsToken = localStorage.getItem('token');
-    if (lsToken) {
+    if (lsToken && lsToken !== 'null') {
       return true;
     }
     return false;
